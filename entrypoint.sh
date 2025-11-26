@@ -63,9 +63,11 @@ if [ -n "${INPUT_FORMAT:-}" ] && [ "${INPUT_FORMAT}" != "table" ]; then
       ;;
     sarif)
       dockerCmd+=(--sarif)
-      if [ -n "${INPUT_OUTPUT:-}" ]; then
-        dockerCmd+=(--sariffile "${INPUT_OUTPUT}")
-      fi
+      # Use default filename if not specified
+      SARIF_FILE="${INPUT_OUTPUT:-aqua-results.sarif}"
+      dockerCmd+=(--sariffile "${SARIF_FILE}")
+      # Export for use in action.yaml upload step
+      echo "SARIF_FILE=${SARIF_FILE}" >> "${GITHUB_ENV}"
       ;;
     html)
       dockerCmd+=(--html)

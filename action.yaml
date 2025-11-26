@@ -53,6 +53,10 @@ inputs:
     description: 'Output file path for scan results'
     required: false
     default: ''
+  upload-sarif:
+    description: 'Automatically upload SARIF results to GitHub Security tab (only applies when format is sarif)'
+    required: false
+    default: 'true'
 
 runs:
   using: 'composite'
@@ -85,3 +89,9 @@ runs:
         INPUT_SCAN_REF: ${{ inputs.scan-ref }}
         INPUT_FORMAT: ${{ inputs.format }}
         INPUT_OUTPUT: ${{ inputs.output }}
+
+    - name: Upload SARIF to GitHub Security
+      if: ${{ inputs.format == 'sarif' && inputs.upload-sarif == 'true' }}
+      uses: github/codeql-action/upload-sarif@v3
+      with:
+        sarif_file: ${{ env.SARIF_FILE }}

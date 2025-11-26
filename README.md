@@ -34,7 +34,7 @@ This GitHub Action scans container images for vulnerabilities using **Aqua Secur
 
 ```yaml
 - name: Scan with Aqua Security
-  uses: andreazorzetto/trivy-premium-action@main
+  uses: andreazorzetto/trivy-premium-action@v1
   with:
     aqua-registry-username: ${{ secrets.AQUA_REGISTRY_USERNAME }}
     aqua-registry-password: ${{ secrets.AQUA_REGISTRY_PASSWORD }}
@@ -95,7 +95,8 @@ Configure the following secrets in your GitHub repository (Settings > Secrets an
 |-------|---------|-------------|
 | `scan-ref` | `.` | Target image to scan (image name) |
 | `format` | `table` | Output format: `table`, `json`, `sarif`, `html` |
-| `output` | - | File path to save scan results |
+| `output` | - | File path to save scan results (defaults to `aqua-results.sarif` when format is `sarif`) |
+| `upload-sarif` | `true` | Automatically upload SARIF results to GitHub Security tab (only when format is `sarif`) |
 
 ## Usage Examples
 
@@ -106,7 +107,7 @@ Configure the following secrets in your GitHub repository (Settings > Secrets an
   run: docker build -t my-app:${{ github.sha }} .
 
 - name: Scan with Aqua Security
-  uses: andreazorzetto/trivy-premium-action@main
+  uses: andreazorzetto/trivy-premium-action@v1
   with:
     aqua-registry-username: ${{ secrets.AQUA_REGISTRY_USERNAME }}
     aqua-registry-password: ${{ secrets.AQUA_REGISTRY_PASSWORD }}
@@ -120,7 +121,7 @@ Configure the following secrets in your GitHub repository (Settings > Secrets an
 
 ```yaml
 - name: Scan and register compliant image
-  uses: andreazorzetto/trivy-premium-action@main
+  uses: andreazorzetto/trivy-premium-action@v1
   with:
     aqua-registry-username: ${{ secrets.AQUA_REGISTRY_USERNAME }}
     aqua-registry-password: ${{ secrets.AQUA_REGISTRY_PASSWORD }}
@@ -133,9 +134,11 @@ Configure the following secrets in your GitHub repository (Settings > Secrets an
 
 ### SARIF Output for GitHub Security
 
+When using `format: sarif`, results are automatically uploaded to GitHub Security tab:
+
 ```yaml
-- name: Scan and generate SARIF
-  uses: andreazorzetto/trivy-premium-action@main
+- name: Scan and upload to GitHub Security
+  uses: andreazorzetto/trivy-premium-action@v1
   with:
     aqua-registry-username: ${{ secrets.AQUA_REGISTRY_USERNAME }}
     aqua-registry-password: ${{ secrets.AQUA_REGISTRY_PASSWORD }}
@@ -143,13 +146,28 @@ Configure the following secrets in your GitHub repository (Settings > Secrets an
     aqua-token: ${{ secrets.AQUA_TOKEN }}
     scan-ref: 'my-app:${{ github.sha }}'
     format: 'sarif'
-    output: 'aqua-results.sarif'
+    # Automatically uploads to GitHub Security (upload-sarif defaults to true)
+```
 
-- name: Upload to GitHub Security
-  uses: github/codeql-action/upload-sarif@v3
-  if: always()
+To disable automatic upload and handle it manually:
+
+```yaml
+- name: Scan without auto-upload
+  uses: andreazorzetto/trivy-premium-action@v1
   with:
-    sarif_file: 'aqua-results.sarif'
+    aqua-registry-username: ${{ secrets.AQUA_REGISTRY_USERNAME }}
+    aqua-registry-password: ${{ secrets.AQUA_REGISTRY_PASSWORD }}
+    aqua-server: ${{ secrets.AQUA_SERVER }}
+    aqua-token: ${{ secrets.AQUA_TOKEN }}
+    scan-ref: 'my-app:${{ github.sha }}'
+    format: 'sarif'
+    output: 'custom-results.sarif'
+    upload-sarif: 'false'
+
+- name: Upload to GitHub Security manually
+  uses: github/codeql-action/upload-sarif@v3
+  with:
+    sarif_file: 'custom-results.sarif'
 ```
 
 ### Complete CI/CD Pipeline
@@ -174,7 +192,7 @@ jobs:
         run: docker build -t $IMAGE_NAME:${{ github.sha }} .
 
       - name: Scan with Aqua
-        uses: andreazorzetto/trivy-premium-action@main
+        uses: andreazorzetto/trivy-premium-action@v1
         with:
           aqua-registry-username: ${{ secrets.AQUA_REGISTRY_USERNAME }}
           aqua-registry-password: ${{ secrets.AQUA_REGISTRY_PASSWORD }}
