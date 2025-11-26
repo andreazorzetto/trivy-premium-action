@@ -1,0 +1,792 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/main/sarif-2.1/schema/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "fullName": "Trivy Premium Vulnerability Scanner",
+          "informationUri": "https://www.aquasec.com",
+          "name": "TrivyPremium",
+          "rules": [
+            {
+              "id": "CVE-2025-46394",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "In tar in BusyBox through 1.37.0, a TAR archive ca..."
+              },
+              "fullDescription": {
+                "text": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hidden f..."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394",
+              "help": {
+                "text": "Vulnerability CVE-2025-46394\nSeverity: low\nPackage: ssl_client\nFixed Version: 1.37.0-r20\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-46394](https://nvd.nist.gov/vuln/detail/CVE-2025-46394)\nIn tar in BusyBox through 1.37.0, a TAR archive can have filenames hidden from a listing through the use of terminal escape sequences.",
+                "markdown": "**Vulnerability CVE-2025-46394**\n| Severity | Package | Fixed Version | Exploit Available | Exploit Type | Link |\n| --- | --- | --- | --- | --- | --- |\n|low|ssl_client|1.37.0-r20|[]()||[CVE-2025-46394](https://nvd.nist.gov/vuln/detail/CVE-2025-46394)|\n\nIn tar in BusyBox through 1.37.0, a TAR archive can have filenames hidden from a listing through the use of terminal escape sequences."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "3.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "low"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-58251",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "In netstat in BusyBox through 1.37.0, local users ..."
+              },
+              "fullDescription": {
+                "text": "In netstat in BusyBox through 1.37.0, local users can launch of network app..."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://nvd.nist.gov/vuln/detail/CVE-2024-58251",
+              "help": {
+                "text": "Vulnerability CVE-2024-58251\nSeverity: low\nPackage: ssl_client\nFixed Version: 1.37.0-r20\nExploit Available: []()\nExploit Type: \nLink: [CVE-2024-58251](https://nvd.nist.gov/vuln/detail/CVE-2024-58251)\nIn netstat in BusyBox through 1.37.0, local users can launch of network application with an argv[0] containing an ANSI terminal escape sequence, leading to a denial of service (terminal locked up) when netstat is used by a victim.",
+                "markdown": "**Vulnerability CVE-2024-58251**\n| Severity | Package | Fixed Version | Exploit Available | Exploit Type | Link |\n| --- | --- | --- | --- | --- | --- |\n|low|ssl_client|1.37.0-r20|[]()||[CVE-2024-58251](https://nvd.nist.gov/vuln/detail/CVE-2024-58251)|\n\nIn netstat in BusyBox through 1.37.0, local users can launch of network application with an argv[0] containing an ANSI terminal escape sequence, leading to a denial of service (terminal locked up) when netstat is used by a victim."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "2.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "low"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-61725",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "The ParseAddress function constructeds domain-lite..."
+              },
+              "fullDescription": {
+                "text": "The ParseAddress function constructeds domain-literal address components th..."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://nvd.nist.gov/vuln/detail/CVE-2025-61725",
+              "help": {
+                "text": "Vulnerability CVE-2025-61725\nSeverity: high\nPackage: stdlib\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-61725](https://nvd.nist.gov/vuln/detail/CVE-2025-61725)\nThe ParseAddress function constructeds domain-literal address components through repeated string concatenation. When parsing large domain-literal components, this can cause excessive CPU consumption.",
+                "markdown": "**Vulnerability CVE-2025-61725**\n| Severity | Package | Fixed Version | Exploit Available | Exploit Type | Link |\n| --- | --- | --- | --- | --- | --- |\n|high|stdlib|1.24.8, 1.25.2|[]()||[CVE-2025-61725](https://nvd.nist.gov/vuln/detail/CVE-2025-61725)|\n\nThe ParseAddress function constructeds domain-literal address components through repeated string concatenation. When parsing large domain-literal components, this can cause excessive CPU consumption."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "high"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-61723",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "The processing time for parsing some invalid input..."
+              },
+              "fullDescription": {
+                "text": "The processing time for parsing some invalid inputs scales non-linearly wit..."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://nvd.nist.gov/vuln/detail/CVE-2025-61723",
+              "help": {
+                "text": "Vulnerability CVE-2025-61723\nSeverity: high\nPackage: stdlib\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-61723](https://nvd.nist.gov/vuln/detail/CVE-2025-61723)\nThe processing time for parsing some invalid inputs scales non-linearly with respect to the size of the input. This affects programs which parse untrusted PEM inputs.",
+                "markdown": "**Vulnerability CVE-2025-61723**\n| Severity | Package | Fixed Version | Exploit Available | Exploit Type | Link |\n| --- | --- | --- | --- | --- | --- |\n|high|stdlib|1.24.8, 1.25.2|[]()||[CVE-2025-61723](https://nvd.nist.gov/vuln/detail/CVE-2025-61723)|\n\nThe processing time for parsing some invalid inputs scales non-linearly with respect to the size of the input. This affects programs which parse untrusted PEM inputs."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "high"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-58188",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Validating certificate chains which contain DSA pu..."
+              },
+              "fullDescription": {
+                "text": "Validating certificate chains which contain DSA public keys can cause progr..."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://nvd.nist.gov/vuln/detail/CVE-2025-58188",
+              "help": {
+                "text": "Vulnerability CVE-2025-58188\nSeverity: high\nPackage: stdlib\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-58188](https://nvd.nist.gov/vuln/detail/CVE-2025-58188)\nValidating certificate chains which contain DSA public keys can cause programs to panic, due to a interface cast that assumes they implement the Equal method. This affects programs which validate arbitrary certificate chains.",
+                "markdown": "**Vulnerability CVE-2025-58188**\n| Severity | Package | Fixed Version | Exploit Available | Exploit Type | Link |\n| --- | --- | --- | --- | --- | --- |\n|high|stdlib|1.24.8, 1.25.2|[]()||[CVE-2025-58188](https://nvd.nist.gov/vuln/detail/CVE-2025-58188)|\n\nValidating certificate chains which contain DSA public keys can cause programs to panic, due to a interface cast that assumes they implement the Equal method. This affects programs which validate arbitrary certificate chains."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "high"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-58187",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Due to the design of the name constraint checking ..."
+              },
+              "fullDescription": {
+                "text": "Due to the design of the name constraint checking algorithm, the processing..."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://nvd.nist.gov/vuln/detail/CVE-2025-58187",
+              "help": {
+                "text": "Vulnerability CVE-2025-58187\nSeverity: high\nPackage: stdlib\nFixed Version: 1.24.9, 1.25.3\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-58187](https://nvd.nist.gov/vuln/detail/CVE-2025-58187)\nDue to the design of the name constraint checking algorithm, the processing time of some inputs scale non-linearly with respect to the size of the certificate. This affects programs which validate arbitrary certificate chains.",
+                "markdown": "**Vulnerability CVE-2025-58187**\n| Severity | Package | Fixed Version | Exploit Available | Exploit Type | Link |\n| --- | --- | --- | --- | --- | --- |\n|high|stdlib|1.24.9, 1.25.3|[]()||[CVE-2025-58187](https://nvd.nist.gov/vuln/detail/CVE-2025-58187)|\n\nDue to the design of the name constraint checking algorithm, the processing time of some inputs scale non-linearly with respect to the size of the certificate. This affects programs which validate arbitrary certificate chains."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "high"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-58189",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "When Conn.Handshake fails during ALPN negotiation ..."
+              },
+              "fullDescription": {
+                "text": "When Conn.Handshake fails during ALPN negotiation the error contains attack..."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://nvd.nist.gov/vuln/detail/CVE-2025-58189",
+              "help": {
+                "text": "Vulnerability CVE-2025-58189\nSeverity: medium\nPackage: stdlib\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-58189](https://nvd.nist.gov/vuln/detail/CVE-2025-58189)\nWhen Conn.Handshake fails during ALPN negotiation the error contains attacker controlled information (the ALPN protocols sent by the client) which is not escaped.",
+                "markdown": "**Vulnerability CVE-2025-58189**\n| Severity | Package | Fixed Version | Exploit Available | Exploit Type | Link |\n| --- | --- | --- | --- | --- | --- |\n|medium|stdlib|1.24.8, 1.25.2|[]()||[CVE-2025-58189](https://nvd.nist.gov/vuln/detail/CVE-2025-58189)|\n\nWhen Conn.Handshake fails during ALPN negotiation the error contains attacker controlled information (the ALPN protocols sent by the client) which is not escaped."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "medium"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-58183",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "tar.Reader does not set a maximum size on the numb..."
+              },
+              "fullDescription": {
+                "text": "tar.Reader does not set a maximum size on the number of sparse region data ..."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://nvd.nist.gov/vuln/detail/CVE-2025-58183",
+              "help": {
+                "text": "Vulnerability CVE-2025-58183\nSeverity: medium\nPackage: stdlib\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-58183](https://nvd.nist.gov/vuln/detail/CVE-2025-58183)\ntar.Reader does not set a maximum size on the number of sparse region data blocks in GNU tar pax 1.0 sparse files. A maliciously-crafted archive containing a large number of sparse regions can cause a Reader to read an unbounded amount of data from the archive into memory. When reading from a compressed source, a small compressed input can result in large allocations.",
+                "markdown": "**Vulnerability CVE-2025-58183**\n| Severity | Package | Fixed Version | Exploit Available | Exploit Type | Link |\n| --- | --- | --- | --- | --- | --- |\n|medium|stdlib|1.24.8, 1.25.2|[]()||[CVE-2025-58183](https://nvd.nist.gov/vuln/detail/CVE-2025-58183)|\n\ntar.Reader does not set a maximum size on the number of sparse region data blocks in GNU tar pax 1.0 sparse files. A maliciously-crafted archive containing a large number of sparse regions can cause a Reader to read an unbounded amount of data from the archive into memory. When reading from a compressed source, a small compressed input can result in large allocations."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "4.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "medium"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-61724",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "The Reader.ReadResponse function constructs a resp..."
+              },
+              "fullDescription": {
+                "text": "The Reader.ReadResponse function constructs a response string through repea..."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://nvd.nist.gov/vuln/detail/CVE-2025-61724",
+              "help": {
+                "text": "Vulnerability CVE-2025-61724\nSeverity: medium\nPackage: stdlib\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-61724](https://nvd.nist.gov/vuln/detail/CVE-2025-61724)\nThe Reader.ReadResponse function constructs a response string through repeated string concatenation of lines. When the number of lines in a response is large, this can cause excessive CPU consumption.",
+                "markdown": "**Vulnerability CVE-2025-61724**\n| Severity | Package | Fixed Version | Exploit Available | Exploit Type | Link |\n| --- | --- | --- | --- | --- | --- |\n|medium|stdlib|1.24.8, 1.25.2|[]()||[CVE-2025-61724](https://nvd.nist.gov/vuln/detail/CVE-2025-61724)|\n\nThe Reader.ReadResponse function constructs a response string through repeated string concatenation of lines. When the number of lines in a response is large, this can cause excessive CPU consumption."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "medium"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-58186",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Despite HTTP headers having a default limit of 1MB..."
+              },
+              "fullDescription": {
+                "text": "Despite HTTP headers having a default limit of 1MB, the number of cookies t..."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://nvd.nist.gov/vuln/detail/CVE-2025-58186",
+              "help": {
+                "text": "Vulnerability CVE-2025-58186\nSeverity: medium\nPackage: stdlib\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-58186](https://nvd.nist.gov/vuln/detail/CVE-2025-58186)\nDespite HTTP headers having a default limit of 1MB, the number of cookies that can be parsed does not have a limit. By sending a lot of very small cookies such as \"a=;\", an attacker can make an HTTP server allocate a large amount of structs, causing large memory consumption.",
+                "markdown": "**Vulnerability CVE-2025-58186**\n| Severity | Package | Fixed Version | Exploit Available | Exploit Type | Link |\n| --- | --- | --- | --- | --- | --- |\n|medium|stdlib|1.24.8, 1.25.2|[]()||[CVE-2025-58186](https://nvd.nist.gov/vuln/detail/CVE-2025-58186)|\n\nDespite HTTP headers having a default limit of 1MB, the number of cookies that can be parsed does not have a limit. By sending a lot of very small cookies such as \"a=;\", an attacker can make an HTTP server allocate a large amount of structs, causing large memory consumption."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "medium"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-47912",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "The Parse function permits values other than IPv6 ..."
+              },
+              "fullDescription": {
+                "text": "The Parse function permits values other than IPv6 addresses to be included ..."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://nvd.nist.gov/vuln/detail/CVE-2025-47912",
+              "help": {
+                "text": "Vulnerability CVE-2025-47912\nSeverity: medium\nPackage: stdlib\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-47912](https://nvd.nist.gov/vuln/detail/CVE-2025-47912)\nThe Parse function permits values other than IPv6 addresses to be included in square brackets within the host component of a URL. RFC 3986 permits IPv6 addresses to be included within the host component, enclosed within square brackets. For example: \"http://[::1]/\". IPv4 addresses and hostnames must not appear within square brackets. Parse did not enforce this requirement.",
+                "markdown": "**Vulnerability CVE-2025-47912**\n| Severity | Package | Fixed Version | Exploit Available | Exploit Type | Link |\n| --- | --- | --- | --- | --- | --- |\n|medium|stdlib|1.24.8, 1.25.2|[]()||[CVE-2025-47912](https://nvd.nist.gov/vuln/detail/CVE-2025-47912)|\n\nThe Parse function permits values other than IPv6 addresses to be included in square brackets within the host component of a URL. RFC 3986 permits IPv6 addresses to be included within the host component, enclosed within square brackets. For example: \"http://[::1]/\". IPv4 addresses and hostnames must not appear within square brackets. Parse did not enforce this requirement."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "medium"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-58185",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Parsing a maliciously crafted DER payload could al..."
+              },
+              "fullDescription": {
+                "text": "Parsing a maliciously crafted DER payload could allocate large amounts of m..."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://nvd.nist.gov/vuln/detail/CVE-2025-58185",
+              "help": {
+                "text": "Vulnerability CVE-2025-58185\nSeverity: medium\nPackage: stdlib\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-58185](https://nvd.nist.gov/vuln/detail/CVE-2025-58185)\nParsing a maliciously crafted DER payload could allocate large amounts of memory, causing memory exhaustion.",
+                "markdown": "**Vulnerability CVE-2025-58185**\n| Severity | Package | Fixed Version | Exploit Available | Exploit Type | Link |\n| --- | --- | --- | --- | --- | --- |\n|medium|stdlib|1.24.8, 1.25.2|[]()||[CVE-2025-58185](https://nvd.nist.gov/vuln/detail/CVE-2025-58185)|\n\nParsing a maliciously crafted DER payload could allocate large amounts of memory, causing memory exhaustion."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "medium"
+                ]
+              }
+            }
+          ],
+          "version": ""
+        }
+      },
+      "results": [
+        {
+          "ruleId": "CVE-2025-46394",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Package: busybox\nInstalled Version: 1.37.0-r19\nVulnerability CVE-2025-46394\nSeverity: low\nFixed Version: 1.37.0-r20\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-46394](https://nvd.nist.gov/vuln/detail/CVE-2025-46394)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/postgres",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/postgres: busybox@1.37.0-r19"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-58251",
+          "ruleIndex": 1,
+          "level": "note",
+          "message": {
+            "text": "Package: busybox\nInstalled Version: 1.37.0-r19\nVulnerability CVE-2024-58251\nSeverity: low\nFixed Version: 1.37.0-r20\nExploit Available: []()\nExploit Type: \nLink: [CVE-2024-58251](https://nvd.nist.gov/vuln/detail/CVE-2024-58251)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/postgres",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/postgres: busybox@1.37.0-r19"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-46394",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Package: busybox-binsh\nInstalled Version: 1.37.0-r19\nVulnerability CVE-2025-46394\nSeverity: low\nFixed Version: 1.37.0-r20\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-46394](https://nvd.nist.gov/vuln/detail/CVE-2025-46394)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/postgres",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/postgres: busybox-binsh@1.37.0-r19"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-58251",
+          "ruleIndex": 1,
+          "level": "note",
+          "message": {
+            "text": "Package: busybox-binsh\nInstalled Version: 1.37.0-r19\nVulnerability CVE-2024-58251\nSeverity: low\nFixed Version: 1.37.0-r20\nExploit Available: []()\nExploit Type: \nLink: [CVE-2024-58251](https://nvd.nist.gov/vuln/detail/CVE-2024-58251)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/postgres",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/postgres: busybox-binsh@1.37.0-r19"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-46394",
+          "ruleIndex": 0,
+          "level": "note",
+          "message": {
+            "text": "Package: ssl_client\nInstalled Version: 1.37.0-r19\nVulnerability CVE-2025-46394\nSeverity: low\nFixed Version: 1.37.0-r20\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-46394](https://nvd.nist.gov/vuln/detail/CVE-2025-46394)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/postgres",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/postgres: ssl_client@1.37.0-r19"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-58251",
+          "ruleIndex": 1,
+          "level": "note",
+          "message": {
+            "text": "Package: ssl_client\nInstalled Version: 1.37.0-r19\nVulnerability CVE-2024-58251\nSeverity: low\nFixed Version: 1.37.0-r20\nExploit Available: []()\nExploit Type: \nLink: [CVE-2024-58251](https://nvd.nist.gov/vuln/detail/CVE-2024-58251)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "library/postgres",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "library/postgres: ssl_client@1.37.0-r19"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-61725",
+          "ruleIndex": 2,
+          "level": "error",
+          "message": {
+            "text": "Package: stdlib\nInstalled Version: v1.24.6\nVulnerability CVE-2025-61725\nSeverity: high\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-61725](https://nvd.nist.gov/vuln/detail/CVE-2025-61725)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/bin/gosu",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/bin/gosu: stdlib@v1.24.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-61723",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Package: stdlib\nInstalled Version: v1.24.6\nVulnerability CVE-2025-61723\nSeverity: high\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-61723](https://nvd.nist.gov/vuln/detail/CVE-2025-61723)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/bin/gosu",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/bin/gosu: stdlib@v1.24.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-58188",
+          "ruleIndex": 4,
+          "level": "error",
+          "message": {
+            "text": "Package: stdlib\nInstalled Version: v1.24.6\nVulnerability CVE-2025-58188\nSeverity: high\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-58188](https://nvd.nist.gov/vuln/detail/CVE-2025-58188)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/bin/gosu",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/bin/gosu: stdlib@v1.24.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-58187",
+          "ruleIndex": 5,
+          "level": "error",
+          "message": {
+            "text": "Package: stdlib\nInstalled Version: v1.24.6\nVulnerability CVE-2025-58187\nSeverity: high\nFixed Version: 1.24.9, 1.25.3\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-58187](https://nvd.nist.gov/vuln/detail/CVE-2025-58187)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/bin/gosu",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/bin/gosu: stdlib@v1.24.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-58189",
+          "ruleIndex": 6,
+          "level": "warning",
+          "message": {
+            "text": "Package: stdlib\nInstalled Version: v1.24.6\nVulnerability CVE-2025-58189\nSeverity: medium\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-58189](https://nvd.nist.gov/vuln/detail/CVE-2025-58189)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/bin/gosu",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/bin/gosu: stdlib@v1.24.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-58183",
+          "ruleIndex": 7,
+          "level": "warning",
+          "message": {
+            "text": "Package: stdlib\nInstalled Version: v1.24.6\nVulnerability CVE-2025-58183\nSeverity: medium\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-58183](https://nvd.nist.gov/vuln/detail/CVE-2025-58183)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/bin/gosu",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/bin/gosu: stdlib@v1.24.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-61724",
+          "ruleIndex": 8,
+          "level": "warning",
+          "message": {
+            "text": "Package: stdlib\nInstalled Version: v1.24.6\nVulnerability CVE-2025-61724\nSeverity: medium\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-61724](https://nvd.nist.gov/vuln/detail/CVE-2025-61724)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/bin/gosu",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/bin/gosu: stdlib@v1.24.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-58186",
+          "ruleIndex": 9,
+          "level": "warning",
+          "message": {
+            "text": "Package: stdlib\nInstalled Version: v1.24.6\nVulnerability CVE-2025-58186\nSeverity: medium\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-58186](https://nvd.nist.gov/vuln/detail/CVE-2025-58186)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/bin/gosu",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/bin/gosu: stdlib@v1.24.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-47912",
+          "ruleIndex": 10,
+          "level": "warning",
+          "message": {
+            "text": "Package: stdlib\nInstalled Version: v1.24.6\nVulnerability CVE-2025-47912\nSeverity: medium\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-47912](https://nvd.nist.gov/vuln/detail/CVE-2025-47912)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/bin/gosu",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/bin/gosu: stdlib@v1.24.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-58185",
+          "ruleIndex": 11,
+          "level": "warning",
+          "message": {
+            "text": "Package: stdlib\nInstalled Version: v1.24.6\nVulnerability CVE-2025-58185\nSeverity: medium\nFixed Version: 1.24.8, 1.25.2\nExploit Available: []()\nExploit Type: \nLink: [CVE-2025-58185](https://nvd.nist.gov/vuln/detail/CVE-2025-58185)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "usr/local/bin/gosu",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "usr/local/bin/gosu: stdlib@v1.24.6"
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits",
+      "originalUriBaseIds": {
+        "ROOTPATH": {
+          "uri": "file:///Users/andreazorzetto/Repositories/andreazorzetto/trivy-premium-action/postgres:16-alpine/"
+        }
+      },
+      "properties": {
+        "imageID": "sha256:79c06d285ed9186efbbc45c73413b3c3510c3c94ffede2f25d1e523f74d07f28",
+        "imageName": "postgres:16-alpine",
+        "repoDigests": [
+          "postgres@sha256:79c06d285ed9186efbbc45c73413b3c3510c3c94ffede2f25d1e523f74d07f28"
+        ],
+        "repoTags": [
+          "postgres:16-alpine"
+        ]
+      }
+    }
+  ]
+}

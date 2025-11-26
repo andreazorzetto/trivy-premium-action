@@ -1,0 +1,39 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+env:
+  SCANNER_VERSION: saas-latest
+  BATS_LIB_PATH: '/usr/lib/'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bats and bats libs
+        uses: bats-core/bats-action@2.0.0
+
+      - name: Login to Aqua Registry
+        run: |
+          echo "Logging in to Aqua Registry..."
+          echo "${{ secrets.AQUA_REGISTRY_PASSWORD }}" | docker login registry.aquasec.com -u "${{ secrets.AQUA_REGISTRY_USERNAME }}" --password-stdin
+
+      - name: Pull Aqua Scanner
+        run: |
+          docker pull registry.aquasec.com/scanner:${{ env.SCANNER_VERSION }}
+          echo "Aqua Scanner version ${{ env.SCANNER_VERSION }} pulled successfully"
+
+      - name: Test
+        run: bats --recursive --timing --verbose-run .
+        env:
+          # Aqua Premium Configuration
+          AQUA_SERVER: ${{ secrets.AQUA_SERVER }}
+          AQUA_TOKEN: ${{ secrets.AQUA_TOKEN }}
+          AQUA_REGISTRY_USERNAME: ${{ secrets.AQUA_REGISTRY_USERNAME }}
+          AQUA_REGISTRY_PASSWORD: ${{ secrets.AQUA_REGISTRY_PASSWORD }}
+          SCANNER_VERSION: ${{ env.SCANNER_VERSION }}

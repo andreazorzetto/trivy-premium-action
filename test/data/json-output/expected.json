@@ -1,0 +1,853 @@
+{
+  "image": "postgres:16-alpine",
+  "scan_started": {},
+  "scan_duration": 1764158551,
+  "digest": "sha256:79c06d285ed9186efbbc45c73413b3c3510c3c94ffede2f25d1e523f74d07f28",
+  "metadata": {
+    "repo_digests": [
+      "postgres@sha256:79c06d285ed9186efbbc45c73413b3c3510c3c94ffede2f25d1e523f74d07f28"
+    ]
+  },
+  "os": "alpine",
+  "version": "3.22.2",
+  "resources": [
+    {
+      "resource": {
+        "format": "apk",
+        "name": "busybox",
+        "version": "1.37.0-r19",
+        "arch": "aarch64",
+        "cpe": "pkg:/alpine:3.22.2:busybox:1.37.0-r19",
+        "license": "GPL-2.0-only",
+        "layer": "ADD alpine-minirootfs-3.22.2-aarch64.tar.gz / # buildkit",
+        "layer_digest": "sha256:0e64f2360a448b389c83fcbc3705e1364ccf43f004bb55233c689e7ce59a1ae9",
+        "src_name": "busybox",
+        "src_version": "1.37.0-r19",
+        "maintainer": "Sören Tempel \u003csoeren+alpine@soeren-tempel.net\u003e",
+        "pkg_identifier": {
+          "purl": "pkg:apk/alpine/busybox@1.37.0-r19?arch=aarch64\u0026distro=3.22.2"
+        }
+      },
+      "scanned": true,
+      "vulnerabilities": [
+        {
+          "name": "CVE-2024-58251",
+          "type": "vulnerability",
+          "description": "In netstat in BusyBox through 1.37.0, local users can launch of network application with an argv[0] containing an ANSI terminal escape sequence, leading to a denial of service (terminal locked up) when netstat is used by a victim.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58251",
+          "publish_date": "2025-04-23",
+          "modification_date": "2025-04-29",
+          "fix_version": "1.37.0-r20",
+          "solution": "Upgrade package busybox to version 1.37.0-r20 or above.",
+          "nvd_score_v3": 2.5,
+          "nvd_vectors_v3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "nvd_severity_v3": "low",
+          "aqua_score": 2.5,
+          "aqua_severity": "low",
+          "aqua_vectors": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "aqua_scoring_system": "CVSS V3",
+          "heuristic_ref_id": 7647499,
+          "aqua_severity_classification": "NVD CVSS V3 Score: 2.5",
+          "aqua_score_classification": "NVD CVSS V3 Score: 2.5",
+          "fix_publish_date": "2025-11-22",
+          "cwe_info": [
+            {
+              "Id": "CWE-150",
+              "name": "Improper Neutralization of Escape, Meta, or Control Sequences"
+            }
+          ],
+          "epss_score": 0.0002,
+          "epss_date": "2025-11-25"
+        },
+        {
+          "name": "CVE-2025-46394",
+          "type": "vulnerability",
+          "description": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hidden from a listing through the use of terminal escape sequences.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394",
+          "publish_date": "2025-04-23",
+          "modification_date": "2025-09-24",
+          "fix_version": "1.37.0-r20",
+          "solution": "Upgrade package busybox to version 1.37.0-r20 or above.",
+          "nvd_score_v3": 3.3,
+          "nvd_vectors_v3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "nvd_severity_v3": "low",
+          "aqua_score": 3.3,
+          "aqua_severity": "low",
+          "aqua_vectors": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "aqua_scoring_system": "CVSS V3",
+          "heuristic_ref_id": 7647498,
+          "aqua_severity_classification": "NVD CVSS V3 Score: 3.3",
+          "aqua_score_classification": "NVD CVSS V3 Score: 3.3",
+          "fix_publish_date": "2025-11-22",
+          "cwe_info": [
+            {
+              "Id": "CWE-451",
+              "name": "User Interface (UI) Misrepresentation of Critical Information"
+            }
+          ],
+          "epss_score": 0.00017,
+          "epss_date": "2025-11-25"
+        }
+      ]
+    },
+    {
+      "resource": {
+        "format": "apk",
+        "name": "busybox-binsh",
+        "version": "1.37.0-r19",
+        "arch": "aarch64",
+        "cpe": "pkg:/alpine:3.22.2:busybox-binsh:1.37.0-r19",
+        "license": "GPL-2.0-only",
+        "layer": "ADD alpine-minirootfs-3.22.2-aarch64.tar.gz / # buildkit",
+        "layer_digest": "sha256:0e64f2360a448b389c83fcbc3705e1364ccf43f004bb55233c689e7ce59a1ae9",
+        "src_name": "busybox",
+        "src_version": "1.37.0-r19",
+        "maintainer": "Sören Tempel \u003csoeren+alpine@soeren-tempel.net\u003e",
+        "pkg_identifier": {
+          "purl": "pkg:apk/alpine/busybox-binsh@1.37.0-r19?arch=aarch64\u0026distro=3.22.2"
+        }
+      },
+      "scanned": true,
+      "vulnerabilities": [
+        {
+          "name": "CVE-2024-58251",
+          "type": "vulnerability",
+          "description": "In netstat in BusyBox through 1.37.0, local users can launch of network application with an argv[0] containing an ANSI terminal escape sequence, leading to a denial of service (terminal locked up) when netstat is used by a victim.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58251",
+          "publish_date": "2025-04-23",
+          "modification_date": "2025-04-29",
+          "fix_version": "1.37.0-r20",
+          "solution": "Upgrade package busybox-binsh to version 1.37.0-r20 or above.",
+          "nvd_score_v3": 2.5,
+          "nvd_vectors_v3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "nvd_severity_v3": "low",
+          "aqua_score": 2.5,
+          "aqua_severity": "low",
+          "aqua_vectors": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "aqua_scoring_system": "CVSS V3",
+          "ancestor_pkg": "busybox",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 2.5",
+          "aqua_score_classification": "NVD CVSS V3 Score: 2.5",
+          "fix_publish_date": "2025-11-22",
+          "cwe_info": [
+            {
+              "Id": "CWE-150",
+              "name": "Improper Neutralization of Escape, Meta, or Control Sequences"
+            }
+          ],
+          "epss_score": 0.0002,
+          "epss_date": "2025-11-25"
+        },
+        {
+          "name": "CVE-2025-46394",
+          "type": "vulnerability",
+          "description": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hidden from a listing through the use of terminal escape sequences.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394",
+          "publish_date": "2025-04-23",
+          "modification_date": "2025-09-24",
+          "fix_version": "1.37.0-r20",
+          "solution": "Upgrade package busybox-binsh to version 1.37.0-r20 or above.",
+          "nvd_score_v3": 3.3,
+          "nvd_vectors_v3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "nvd_severity_v3": "low",
+          "aqua_score": 3.3,
+          "aqua_severity": "low",
+          "aqua_vectors": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "aqua_scoring_system": "CVSS V3",
+          "ancestor_pkg": "busybox",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 3.3",
+          "aqua_score_classification": "NVD CVSS V3 Score: 3.3",
+          "fix_publish_date": "2025-11-22",
+          "cwe_info": [
+            {
+              "Id": "CWE-451",
+              "name": "User Interface (UI) Misrepresentation of Critical Information"
+            }
+          ],
+          "epss_score": 0.00017,
+          "epss_date": "2025-11-25"
+        }
+      ]
+    },
+    {
+      "resource": {
+        "format": "apk",
+        "name": "ssl_client",
+        "version": "1.37.0-r19",
+        "arch": "aarch64",
+        "cpe": "pkg:/alpine:3.22.2:ssl_client:1.37.0-r19",
+        "license": "GPL-2.0-only",
+        "layer": "ADD alpine-minirootfs-3.22.2-aarch64.tar.gz / # buildkit",
+        "layer_digest": "sha256:0e64f2360a448b389c83fcbc3705e1364ccf43f004bb55233c689e7ce59a1ae9",
+        "src_name": "busybox",
+        "src_version": "1.37.0-r19",
+        "maintainer": "Sören Tempel \u003csoeren+alpine@soeren-tempel.net\u003e",
+        "pkg_identifier": {
+          "purl": "pkg:apk/alpine/ssl_client@1.37.0-r19?arch=aarch64\u0026distro=3.22.2"
+        }
+      },
+      "scanned": true,
+      "vulnerabilities": [
+        {
+          "name": "CVE-2025-46394",
+          "type": "vulnerability",
+          "description": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hidden from a listing through the use of terminal escape sequences.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46394",
+          "publish_date": "2025-04-23",
+          "modification_date": "2025-09-24",
+          "fix_version": "1.37.0-r20",
+          "solution": "Upgrade package ssl_client to version 1.37.0-r20 or above.",
+          "nvd_score_v3": 3.3,
+          "nvd_vectors_v3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "nvd_severity_v3": "low",
+          "aqua_score": 3.3,
+          "aqua_severity": "low",
+          "aqua_vectors": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+          "aqua_scoring_system": "CVSS V3",
+          "ancestor_pkg": "busybox",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 3.3",
+          "aqua_score_classification": "NVD CVSS V3 Score: 3.3",
+          "fix_publish_date": "2025-11-22",
+          "cwe_info": [
+            {
+              "Id": "CWE-451",
+              "name": "User Interface (UI) Misrepresentation of Critical Information"
+            }
+          ],
+          "epss_score": 0.00017,
+          "epss_date": "2025-11-25"
+        },
+        {
+          "name": "CVE-2024-58251",
+          "type": "vulnerability",
+          "description": "In netstat in BusyBox through 1.37.0, local users can launch of network application with an argv[0] containing an ANSI terminal escape sequence, leading to a denial of service (terminal locked up) when netstat is used by a victim.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58251",
+          "publish_date": "2025-04-23",
+          "modification_date": "2025-04-29",
+          "fix_version": "1.37.0-r20",
+          "solution": "Upgrade package ssl_client to version 1.37.0-r20 or above.",
+          "nvd_score_v3": 2.5,
+          "nvd_vectors_v3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "nvd_severity_v3": "low",
+          "aqua_score": 2.5,
+          "aqua_severity": "low",
+          "aqua_vectors": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "aqua_scoring_system": "CVSS V3",
+          "ancestor_pkg": "busybox",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 2.5",
+          "aqua_score_classification": "NVD CVSS V3 Score: 2.5",
+          "fix_publish_date": "2025-11-22",
+          "cwe_info": [
+            {
+              "Id": "CWE-150",
+              "name": "Improper Neutralization of Escape, Meta, or Control Sequences"
+            }
+          ],
+          "epss_score": 0.0002,
+          "epss_date": "2025-11-25"
+        }
+      ]
+    },
+    {
+      "resource": {
+        "format": "go",
+        "path": "usr/local/bin/gosu",
+        "name": "stdlib",
+        "version": "v1.24.6",
+        "cpe": "pkg:/go:*:stdlib:v1.24.6",
+        "layer": "RUN /bin/sh -c set -eux; \t\tapk add --no-cache --virtual .gosu-deps \t\tca-certificates \t\tdpkg \t\tgnupg \t; \t\tdpkgArch=\"$(dpkg --print-architecture | awk -F- '{ print $NF }')\"; \twget -O /usr/local/bin/gosu \"https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch\"; \twget -O /usr/local/bin/gosu.asc \"https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc\"; \t\texport GNUPGHOME=\"$(mktemp -d)\"; \tgpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; \tgpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; \tgpgconf --kill all; \trm -rf \"$GNUPGHOME\" /usr/local/bin/gosu.asc; \t\tapk del --no-network .gosu-deps; \t\tchmod +x /usr/local/bin/gosu; \tgosu --version; \tgosu nobody true # buildkit",
+        "layer_digest": "sha256:e22e3b91f9a37e2aa2f686739991785b20ab8952950abc02019c43836946da45",
+        "pkg_identifier": {
+          "purl": "pkg:golang/stdlib@v1.24.6"
+        }
+      },
+      "scanned": true,
+      "vulnerabilities": [
+        {
+          "name": "CVE-2025-58188",
+          "type": "vulnerability",
+          "description": "Validating certificate chains which contain DSA public keys can cause programs to panic, due to a interface cast that assumes they implement the Equal method. This affects programs which validate arbitrary certificate chains.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58188",
+          "publish_date": "2025-10-29",
+          "modification_date": "2025-11-04",
+          "fix_version": "1.24.8, 1.25.2",
+          "solution": "Upgrade package stdlib to version 1.24.8, 1.25.2 or above.",
+          "nvd_score_v3": 7.5,
+          "nvd_vectors_v3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "nvd_severity_v3": "high",
+          "aqua_score": 7.5,
+          "aqua_severity": "high",
+          "aqua_vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "aqua_scoring_system": "CVSS V3",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 7.5",
+          "aqua_score_classification": "NVD CVSS V3 Score: 7.5",
+          "fix_publish_date": "2025-10-30",
+          "epss_score": 0.00013,
+          "epss_date": "2025-11-25"
+        },
+        {
+          "name": "CVE-2025-61723",
+          "type": "vulnerability",
+          "description": "The processing time for parsing some invalid inputs scales non-linearly with respect to the size of the input. This affects programs which parse untrusted PEM inputs.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61723",
+          "publish_date": "2025-10-29",
+          "modification_date": "2025-11-04",
+          "fix_version": "1.24.8, 1.25.2",
+          "solution": "Upgrade package stdlib to version 1.24.8, 1.25.2 or above.",
+          "nvd_score_v3": 7.5,
+          "nvd_vectors_v3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "nvd_severity_v3": "high",
+          "aqua_score": 7.5,
+          "aqua_severity": "high",
+          "aqua_vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "aqua_scoring_system": "CVSS V3",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 7.5",
+          "aqua_score_classification": "NVD CVSS V3 Score: 7.5",
+          "fix_publish_date": "2025-10-30",
+          "epss_score": 0.00024,
+          "epss_date": "2025-11-25"
+        },
+        {
+          "name": "CVE-2025-61725",
+          "type": "vulnerability",
+          "description": "The ParseAddress function constructeds domain-literal address components through repeated string concatenation. When parsing large domain-literal components, this can cause excessive CPU consumption.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61725",
+          "publish_date": "2025-10-29",
+          "modification_date": "2025-11-04",
+          "fix_version": "1.24.8, 1.25.2",
+          "solution": "Upgrade package stdlib to version 1.24.8, 1.25.2 or above.",
+          "nvd_score_v3": 7.5,
+          "nvd_vectors_v3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "nvd_severity_v3": "high",
+          "aqua_score": 7.5,
+          "aqua_severity": "high",
+          "aqua_vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "aqua_scoring_system": "CVSS V3",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 7.5",
+          "aqua_score_classification": "NVD CVSS V3 Score: 7.5",
+          "fix_publish_date": "2025-10-30",
+          "epss_score": 0.00024,
+          "epss_date": "2025-11-25"
+        },
+        {
+          "name": "CVE-2025-58187",
+          "type": "vulnerability",
+          "description": "Due to the design of the name constraint checking algorithm, the processing time of some inputs scale non-linearly with respect to the size of the certificate. This affects programs which validate arbitrary certificate chains.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58187",
+          "publish_date": "2025-10-29",
+          "modification_date": "2025-11-20",
+          "fix_version": "1.24.9, 1.25.3",
+          "solution": "Upgrade package stdlib to version 1.24.9, 1.25.3 or above.",
+          "nvd_score_v3": 7.5,
+          "nvd_vectors_v3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "nvd_severity_v3": "high",
+          "aqua_score": 7.5,
+          "aqua_severity": "high",
+          "aqua_vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "aqua_scoring_system": "CVSS V3",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 7.5",
+          "aqua_score_classification": "NVD CVSS V3 Score: 7.5",
+          "fix_publish_date": "2025-10-30",
+          "epss_score": 0.00013,
+          "epss_date": "2025-11-25"
+        },
+        {
+          "name": "CVE-2025-58189",
+          "type": "vulnerability",
+          "description": "When Conn.Handshake fails during ALPN negotiation the error contains attacker controlled information (the ALPN protocols sent by the client) which is not escaped.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58189",
+          "publish_date": "2025-10-29",
+          "modification_date": "2025-11-04",
+          "fix_version": "1.24.8, 1.25.2",
+          "solution": "Upgrade package stdlib to version 1.24.8, 1.25.2 or above.",
+          "nvd_score_v3": 5.3,
+          "nvd_vectors_v3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "nvd_severity_v3": "medium",
+          "aqua_score": 5.3,
+          "aqua_severity": "medium",
+          "aqua_vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "aqua_scoring_system": "CVSS V3",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 5.3",
+          "aqua_score_classification": "NVD CVSS V3 Score: 5.3",
+          "fix_publish_date": "2025-10-30",
+          "epss_score": 0.00017,
+          "epss_date": "2025-11-25"
+        },
+        {
+          "name": "CVE-2025-47912",
+          "type": "vulnerability",
+          "description": "The Parse function permits values other than IPv6 addresses to be included in square brackets within the host component of a URL. RFC 3986 permits IPv6 addresses to be included within the host component, enclosed within square brackets. For example: \"http://[::1]/\". IPv4 addresses and hostnames must not appear within square brackets. Parse did not enforce this requirement.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-47912",
+          "publish_date": "2025-10-29",
+          "modification_date": "2025-11-04",
+          "fix_version": "1.24.8, 1.25.2",
+          "solution": "Upgrade package stdlib to version 1.24.8, 1.25.2 or above.",
+          "nvd_score_v3": 5.3,
+          "nvd_vectors_v3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "nvd_severity_v3": "medium",
+          "aqua_score": 5.3,
+          "aqua_severity": "medium",
+          "aqua_vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "aqua_scoring_system": "CVSS V3",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 5.3",
+          "aqua_score_classification": "NVD CVSS V3 Score: 5.3",
+          "fix_publish_date": "2025-10-30",
+          "epss_score": 0.00023,
+          "epss_date": "2025-11-25"
+        },
+        {
+          "name": "CVE-2025-58185",
+          "type": "vulnerability",
+          "description": "Parsing a maliciously crafted DER payload could allocate large amounts of memory, causing memory exhaustion.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58185",
+          "publish_date": "2025-10-29",
+          "modification_date": "2025-11-04",
+          "fix_version": "1.24.8, 1.25.2",
+          "solution": "Upgrade package stdlib to version 1.24.8, 1.25.2 or above.",
+          "nvd_score_v3": 5.3,
+          "nvd_vectors_v3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "nvd_severity_v3": "medium",
+          "aqua_score": 5.3,
+          "aqua_severity": "medium",
+          "aqua_vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "aqua_scoring_system": "CVSS V3",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 5.3",
+          "aqua_score_classification": "NVD CVSS V3 Score: 5.3",
+          "fix_publish_date": "2025-10-30",
+          "epss_score": 0.0003,
+          "epss_date": "2025-11-25"
+        },
+        {
+          "name": "CVE-2025-58186",
+          "type": "vulnerability",
+          "description": "Despite HTTP headers having a default limit of 1MB, the number of cookies that can be parsed does not have a limit. By sending a lot of very small cookies such as \"a=;\", an attacker can make an HTTP server allocate a large amount of structs, causing large memory consumption.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58186",
+          "publish_date": "2025-10-29",
+          "modification_date": "2025-11-04",
+          "fix_version": "1.24.8, 1.25.2",
+          "solution": "Upgrade package stdlib to version 1.24.8, 1.25.2 or above.",
+          "nvd_score_v3": 5.3,
+          "nvd_vectors_v3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "nvd_severity_v3": "medium",
+          "aqua_score": 5.3,
+          "aqua_severity": "medium",
+          "aqua_vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "aqua_scoring_system": "CVSS V3",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 5.3",
+          "aqua_score_classification": "NVD CVSS V3 Score: 5.3",
+          "fix_publish_date": "2025-10-30",
+          "epss_score": 0.00023,
+          "epss_date": "2025-11-25"
+        },
+        {
+          "name": "CVE-2025-61724",
+          "type": "vulnerability",
+          "description": "The Reader.ReadResponse function constructs a response string through repeated string concatenation of lines. When the number of lines in a response is large, this can cause excessive CPU consumption.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61724",
+          "publish_date": "2025-10-29",
+          "modification_date": "2025-11-04",
+          "fix_version": "1.24.8, 1.25.2",
+          "solution": "Upgrade package stdlib to version 1.24.8, 1.25.2 or above.",
+          "nvd_score_v3": 5.3,
+          "nvd_vectors_v3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "nvd_severity_v3": "medium",
+          "aqua_score": 5.3,
+          "aqua_severity": "medium",
+          "aqua_vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "aqua_scoring_system": "CVSS V3",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 5.3",
+          "aqua_score_classification": "NVD CVSS V3 Score: 5.3",
+          "fix_publish_date": "2025-10-30",
+          "epss_score": 0.00023,
+          "epss_date": "2025-11-25"
+        },
+        {
+          "name": "CVE-2025-58183",
+          "type": "vulnerability",
+          "description": "tar.Reader does not set a maximum size on the number of sparse region data blocks in GNU tar pax 1.0 sparse files. A maliciously-crafted archive containing a large number of sparse regions can cause a Reader to read an unbounded amount of data from the archive into memory. When reading from a compressed source, a small compressed input can result in large allocations.",
+          "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58183",
+          "publish_date": "2025-10-29",
+          "modification_date": "2025-11-04",
+          "fix_version": "1.24.8, 1.25.2",
+          "solution": "Upgrade package stdlib to version 1.24.8, 1.25.2 or above.",
+          "nvd_score_v3": 4.3,
+          "nvd_vectors_v3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "nvd_severity_v3": "medium",
+          "aqua_score": 4.3,
+          "aqua_severity": "medium",
+          "aqua_vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "aqua_scoring_system": "CVSS V3",
+          "aqua_severity_classification": "NVD CVSS V3 Score: 4.3",
+          "aqua_score_classification": "NVD CVSS V3 Score: 4.3",
+          "fix_publish_date": "2025-10-30",
+          "epss_score": 0.00012,
+          "epss_date": "2025-11-25"
+        }
+      ]
+    }
+  ],
+  "image_assurance_results": {
+    "disallowed": true,
+    "audit_required": true,
+    "policy_failures": [
+      {
+        "policy_id": 508,
+        "policy_name": "api-test-manual",
+        "controls": [
+          "aggregated_vulnerability"
+        ]
+      },
+      {
+        "policy_id": 73,
+        "policy_name": "Baseline-Policy-abax",
+        "blocking": true,
+        "controls": [
+          "root_user"
+        ]
+      },
+      {
+        "policy_id": 55,
+        "policy_name": "musl-check-global",
+        "blocking": true,
+        "controls": [
+          "blacklisted_packages"
+        ]
+      },
+      {
+        "policy_id": 67,
+        "policy_name": "Rob1",
+        "blocking": true,
+        "controls": [
+          "max_severity",
+          "aggregated_vulnerability"
+        ]
+      },
+      {
+        "policy_id": 340,
+        "policy_name": "test-50474",
+        "blocking": true,
+        "controls": [
+          "max_severity"
+        ]
+      },
+      {
+        "policy_id": 540,
+        "policy_name": "test-single-vuln-controls",
+        "controls": [
+          "max_severity",
+          "max_score"
+        ]
+      }
+    ],
+    "checks_performed": [
+      {
+        "policy_id": 74,
+        "policy_name": "Alex_test_cve_block",
+        "control": "cve_blacklist"
+      },
+      {
+        "policy_id": 508,
+        "policy_name": "api-test-manual",
+        "control": "exploitability_and_severity"
+      },
+      {
+        "failed": true,
+        "policy_id": 508,
+        "policy_name": "api-test-manual",
+        "control": "aggregated_vulnerability",
+        "aggregated_maximum_score_allowed": 8,
+        "aggregated_maximum_score_found": 7.5,
+        "aggregated_maximum_severity_allowed": "medium",
+        "aggregated_maximum_severity_found": "high",
+        "aggregated_minimum_score_allowed": 2,
+        "aggregated_maximum_fixable_score_found": 7.5,
+        "remediation": "The image contains at least one vulnerability whose score is in the configured range (2.00,8.00) AND whose severity matches or exceeds the configured value medium"
+      },
+      {
+        "policy_id": 1234,
+        "policy_name": "aviva1",
+        "control": "malware",
+        "malware_file_scanned": 49
+      },
+      {
+        "policy_id": 109,
+        "policy_name": "baseline-odido",
+        "control": "vulnerability_exploitability"
+      },
+      {
+        "policy_id": 109,
+        "policy_name": "baseline-odido",
+        "control": "max_severity",
+        "maximum_severity_allowed": "critical",
+        "maximum_severity_found": "low",
+        "no_fix_excluded": true
+      },
+      {
+        "policy_id": 109,
+        "policy_name": "baseline-odido",
+        "control": "sensitive_data"
+      },
+      {
+        "policy_id": 109,
+        "policy_name": "baseline-odido",
+        "control": "malware",
+        "malware_file_scanned": 49
+      },
+      {
+        "failed": true,
+        "policy_id": 73,
+        "policy_name": "Baseline-Policy-abax",
+        "control": "root_user",
+        "root_user_found": true,
+        "remediation": "Modify the image to run with a user other than root"
+      },
+      {
+        "policy_id": 73,
+        "policy_name": "Baseline-Policy-abax",
+        "control": "vulnerability_exploitability"
+      },
+      {
+        "policy_id": 73,
+        "policy_name": "Baseline-Policy-abax",
+        "control": "max_severity",
+        "maximum_severity_allowed": "critical",
+        "maximum_severity_found": "low",
+        "no_fix_excluded": true
+      },
+      {
+        "policy_id": 73,
+        "policy_name": "Baseline-Policy-abax",
+        "control": "sensitive_data"
+      },
+      {
+        "policy_id": 73,
+        "policy_name": "Baseline-Policy-abax",
+        "control": "malware",
+        "malware_file_scanned": 49
+      },
+      {
+        "policy_id": 63,
+        "policy_name": "CVE_blocked_Rob",
+        "control": "cve_blacklist"
+      },
+      {
+        "policy_id": 1198,
+        "policy_name": "diliptest",
+        "control": "blacklisted_packages"
+      },
+      {
+        "policy_id": 1660,
+        "policy_name": "local-antivirus-scan",
+        "control": "malware",
+        "malware_file_scanned": 49
+      },
+      {
+        "policy_id": 6,
+        "policy_name": "Malware-Default-Policy",
+        "control": "malware",
+        "malware_file_scanned": 49
+      },
+      {
+        "failed": true,
+        "policy_id": 55,
+        "policy_name": "musl-check-global",
+        "control": "blacklisted_packages",
+        "blacklisted_packages_found": [
+          "musl"
+        ],
+        "remediation": "Rebuild the image after removing the following packages: musl"
+      },
+      {
+        "policy_id": 1693,
+        "policy_name": "NPM-shai-hulud-25Nov25",
+        "control": "blacklisted_packages"
+      },
+      {
+        "failed": true,
+        "policy_id": 67,
+        "policy_name": "Rob1",
+        "control": "max_severity",
+        "maximum_severity_allowed": "low",
+        "maximum_severity_found": "high",
+        "remediation": "Maximum CVE severity high matched or exceeded the maximum severity limit"
+      },
+      {
+        "failed": true,
+        "policy_id": 67,
+        "policy_name": "Rob1",
+        "control": "aggregated_vulnerability",
+        "aggregated_maximum_score_allowed": 9.5,
+        "aggregated_maximum_score_found": 7.5,
+        "aggregated_maximum_severity_allowed": "low",
+        "aggregated_maximum_severity_found": "high",
+        "aggregated_minimum_score_allowed": 3.2,
+        "aggregated_maximum_fixable_score_found": 7.5,
+        "remediation": "The image contains at least one vulnerability whose score is in the configured range (3.20,9.50) AND whose severity matches or exceeds the configured value low"
+      },
+      {
+        "policy_id": 241,
+        "policy_name": "rob123",
+        "control": "aggregated_vulnerability",
+        "aggregated_maximum_score_allowed": 10,
+        "aggregated_maximum_score_found": 7.5,
+        "aggregated_maximum_severity_allowed": "high",
+        "aggregated_maximum_severity_found": "high",
+        "aggregated_minimum_score_allowed": 8,
+        "aggregated_maximum_fixable_score_found": 7.5
+      },
+      {
+        "policy_id": 65,
+        "policy_name": "Rob1_test",
+        "control": "cve_blacklist"
+      },
+      {
+        "policy_id": 1166,
+        "policy_name": "rob_assurance",
+        "control": "blacklisted_packages"
+      },
+      {
+        "policy_id": 1264,
+        "policy_name": "Sensitive",
+        "control": "sensitive_data"
+      },
+      {
+        "policy_id": 7,
+        "policy_name": "Sensitive-Data-Default-Policy",
+        "control": "sensitive_data"
+      },
+      {
+        "policy_id": 64,
+        "policy_name": "sri-gcp-test",
+        "control": "cve_blacklist"
+      },
+      {
+        "failed": true,
+        "policy_id": 340,
+        "policy_name": "test-50474",
+        "control": "max_severity",
+        "maximum_severity_allowed": "high",
+        "maximum_severity_found": "high",
+        "remediation": "Maximum CVE severity high matched or exceeded the maximum severity limit"
+      },
+      {
+        "policy_id": 69,
+        "policy_name": "testingimage",
+        "control": "malware",
+        "malware_file_scanned": 49
+      },
+      {
+        "policy_id": 540,
+        "policy_name": "test-single-vuln-controls",
+        "control": "vulnerability_exploitability"
+      },
+      {
+        "failed": true,
+        "policy_id": 540,
+        "policy_name": "test-single-vuln-controls",
+        "control": "max_severity",
+        "maximum_severity_allowed": "high",
+        "maximum_severity_found": "high",
+        "remediation": "Maximum CVE severity high matched or exceeded the maximum severity limit"
+      },
+      {
+        "failed": true,
+        "policy_id": 540,
+        "policy_name": "test-single-vuln-controls",
+        "control": "max_score",
+        "maximum_score_allowed": 7.5,
+        "maximum_score_found": 7.5,
+        "maximum_fixable_score_found": 7.5,
+        "max_vuln_score_allowed": 10,
+        "min_vuln_score_allowed": 7.5,
+        "remediation": "The image contains at least one vulnerability whose score is in the configured range (7.50,10.00)"
+      }
+    ],
+    "block_required": true
+  },
+  "vulnerability_summary": {
+    "total": 16,
+    "high": 4,
+    "medium": 6,
+    "low": 6,
+    "score_average": 4.8875003,
+    "max_score": 7.5,
+    "max_fixable_score": 7.5
+  },
+  "scan_options": {
+    "scan_executables": true,
+    "scan_sensitive_data": true,
+    "scan_malware": true,
+    "strict_scan": true,
+    "scan_files": true,
+    "scan_timeout": 3600000000000,
+    "manual_pull_fallback": true,
+    "save_adhoc_scans": true,
+    "use_cvss3": true,
+    "dockerless": true,
+    "system_image_platform": "amd64:::",
+    "telemetry_enabled": true,
+    "enable_fast_scanning": true,
+    "suggest_os_upgrade": true,
+    "adhoc_scan_retention": 30,
+    "enable_diff_ids": true,
+    "is_trivy_enabled": true,
+    "adhoc_scan_options": {
+      "use_system_image_platform": true
+    },
+    "rego_thresholds": {
+      "enabled": true,
+      "scan_timeout": 15,
+      "files_limit": 1000
+    },
+    "purl_version": 1
+  },
+  "pull_name": "postgres:16-alpine",
+  "required_image_platform": "amd64:::",
+  "scanned_image_platform": ":::",
+  "security_feeds_used": {
+    "executables": "1a25e8dbb0d273"
+  },
+  "local": true,
+  "OriginFromHostImage": true,
+  "CanSkipFileHashSave": true,
+  "save_acknowledged_issues": [
+    {
+      "resource_type": "package",
+      "resource_cpe": "pkg:/debian:12.11:libxml2:2.9.14+dfsg-1.3~deb12u2",
+      "issue_type": "vulnerability",
+      "issue_name": "CVE-2025-49794",
+      "author": "srikanthreddy.gajjala@aquasec.com",
+      "comment": "test1",
+      "date": 1757344997
+    },
+    {
+      "resource_type": "package",
+      "resource_cpe": "pkg:/debian:12.11:libxml2:2.9.14+dfsg-1.3~deb12u2",
+      "issue_type": "vulnerability",
+      "issue_name": "CVE-2025-49796",
+      "author": "srikanthreddy.gajjala@aquasec.com",
+      "comment": "tes1",
+      "date": 1757344988
+    }
+  ],
+  "registryType": 6,
+  "feature_flag_map": {
+    "SLK-50359": true,
+    "SLK-55310": false,
+    "SLK-57390": true,
+    "SLK-60909": true,
+    "SLK-64302": true,
+    "SLK-69130": true,
+    "SLK-71523": true,
+    "SLK-76452": false,
+    "SLK-78439": true,
+    "SLK-82907": true,
+    "SLK-84125": false,
+    "SLK-85074": false,
+    "SLK-86473": false,
+    "SLK-86665": true,
+    "SLK-93862": true
+  },
+  "console_url": "http://ec2-52-13-244-64.us-west-2.compute.amazonaws.com:8080/ah/#/csp/images/Ad%20Hoc%20Scans/postgres:16-alpine?digest=sha256%253A79c06d285ed9186efbbc45c73413b3c3510c3c94ffede2f25d1e523f74d07f28\u0026supersonicS3Url=https%253A%252F%252Fuiirp-c1fae5dbe2-data.s3.eu-central-1.amazonaws.com%252Fss%252Fc1fae5dbe2%252Fimage%252Fad-hoc-scans%252Fpostgres16-alpine%252F26112025%252F7sx4ylsp-1764158553857957773.proto",
+  "supersonic_s3_url": "https://uiirp-c1fae5dbe2-data.s3.eu-central-1.amazonaws.com/ss/c1fae5dbe2/image/ad-hoc-scans/postgres16-alpine/26112025/7sx4ylsp-1764158553857957773.proto"
+}

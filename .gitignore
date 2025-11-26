@@ -1,0 +1,7 @@
+.idea/
+*.test
+!test/data/*.test
+.vscode/
+
+.cache
+CLAUDE.md

@@ -1,0 +1,43 @@
+name: build
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+env:
+  IMAGE_NAME: docker.io/my-organization/my-app
+  IMAGE_REGISTRY_INTEGRATION: Docker Hub
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build an image from Dockerfile
+        run: |
+          docker build -t ${{ env.IMAGE_NAME }}:${{ github.sha }} .
+
+      - name: Run Aqua Security Scanner
+        uses: andreazorzetto/trivy-premium-action@main
+        with:
+          # Aqua Premium Authentication
+          aqua-registry-username: ${{ secrets.AQUA_REGISTRY_USERNAME }}
+          aqua-registry-password: ${{ secrets.AQUA_REGISTRY_PASSWORD }}
+          aqua-server: ${{ secrets.AQUA_SERVER }}
+          aqua-token: ${{ secrets.AQUA_TOKEN }}
+          # Scanner Configuration
+          scan-ref: '${{ env.IMAGE_NAME }}:${{ github.sha }}'
+          image-registry-integration: ${{ env.IMAGE_REGISTRY_INTEGRATION }}
+          register-compliant: 'true'
+          format: 'sarif'
+          output: 'aqua-results.sarif'
+
+      - name: Upload scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with:
+          sarif_file: 'aqua-results.sarif'

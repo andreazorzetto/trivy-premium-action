@@ -1,0 +1,87 @@
+name: 'Aqua Security Scanner (Trivy Premium)'
+description: 'Scans container images for vulnerabilities with Aqua Security Scanner (Trivy Premium)'
+author: 'Aqua Security'
+
+branding:
+  icon: 'droplet'
+  color: 'white'
+
+inputs:
+  # Aqua Premium Authentication
+  aqua-registry-username:
+    description: 'Username for registry.aquasec.com to pull scanner image'
+    required: true
+  aqua-registry-password:
+    description: 'Password for registry.aquasec.com to pull scanner image'
+    required: true
+  aqua-server:
+    description: 'Aqua SaaS platform URL (e.g., https://eu-1.console.cloud.aquasec.com)'
+    required: false
+    default: 'https://console.cloud.aquasec.com'
+  aqua-token:
+    description: 'Scanner token for Aqua SaaS authentication'
+    required: true
+  scanner-version:
+    description: 'Aqua scanner image version'
+    required: false
+    default: 'saas-latest'
+
+  # Aqua Premium Features
+  image-registry-integration:
+    description: 'Registry name as configured in Aqua integrations (e.g., "Docker Hub")'
+    required: false
+    default: ''
+  register-compliant:
+    description: 'Register image only if compliant with Aqua policies'
+    required: false
+    default: 'false'
+  scan-local:
+    description: 'Scan a locally built image (not yet in registry)'
+    required: false
+    default: 'true'
+
+  # Scan Target and Output
+  scan-ref:
+    description: 'Target image to scan (image name)'
+    required: false
+    default: '.'
+  format:
+    description: 'Output format (table, json, sarif, html)'
+    required: false
+    default: 'table'
+  output:
+    description: 'Output file path for scan results'
+    required: false
+    default: ''
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Login to Aqua Registry
+      shell: bash
+      run: |
+        echo "Logging in to registry.aquasec.com..."
+        echo "${{ inputs.aqua-registry-password }}" | docker login registry.aquasec.com -u "${{ inputs.aqua-registry-username }}" --password-stdin
+
+    - name: Set GitHub Path
+      run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
+      shell: bash
+      env:
+        GITHUB_ACTION_PATH: ${{ github.action_path }}
+
+    - name: Run Aqua Scanner
+      shell: bash
+      run: entrypoint.sh
+      env:
+        # Aqua Premium Configuration
+        AQUA_SERVER: ${{ inputs.aqua-server }}
+        AQUA_TOKEN: ${{ inputs.aqua-token }}
+        SCANNER_VERSION: ${{ inputs.scanner-version }}
+        IMAGE_REGISTRY_INTEGRATION: ${{ inputs.image-registry-integration }}
+        REGISTER_COMPLIANT: ${{ inputs.register-compliant }}
+        SCAN_LOCAL: ${{ inputs.scan-local }}
+
+        # Scan configuration
+        INPUT_SCAN_REF: ${{ inputs.scan-ref }}
+        INPUT_FORMAT: ${{ inputs.format }}
+        INPUT_OUTPUT: ${{ inputs.output }}
